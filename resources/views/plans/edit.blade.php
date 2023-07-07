@@ -35,6 +35,8 @@
 @stop
 
 @section('js')
+<script src="https://cdn.tiny.cloud/1/cqu9z23sxsssxrvq8aabyju86nlrsh9j57v2u70r0r8gf40q/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
 <script type="text/javascript">
     function previewImage(event, querySelector) {
 
@@ -60,7 +62,7 @@
 </script>
 <script type="text/javascript">
     tinymce.init({
-        selector: 'textarea.editor',
+        selector: 'textarea.editor2',
         width: 1000,
         height: 500,
         plugins: [

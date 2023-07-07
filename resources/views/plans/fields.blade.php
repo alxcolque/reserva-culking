@@ -25,7 +25,7 @@
             @enderror
         </div>
         <div class="col-md-2 mb-3">
-            <label for="discount_time" class="form-label">Descuento:</label><b class="text-danger"> *</b>
+            <label for="discount_time" class="form-label">Tiempo de Descuento:</label><b class="text-danger"> *</b>
             <input type="text" class="form-control" id="discount_time" name="discount_time"
                 value="{{ old('discount_time', $plan->discount_time ?? '') }}">
             @error('discount_time')
@@ -44,7 +44,7 @@
 
     <div class="container">
         <label><strong>Descripción:</strong></label><b class="text-danger"> *</b>
-        <textarea class="editor form-control" name="description" rows="6">{!! old('description', $plan->description ?? '') !!}</textarea>
+        <textarea class="editor2 form-control" name="description" rows="6">{!! old('description', $plan->description ?? '') !!}</textarea>
         @error('description')
             <small class="text-danger">{{ $message }}</small>
         @enderror

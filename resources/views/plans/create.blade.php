@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <a href="{{route('presenters.index')}}">Atrás</a>
+                    <a href="{{route('plans.index')}}">Atrás</a>
                     <div class="card-header">
                         <h4>Registrar</h4>
                     </div>
@@ -32,9 +32,9 @@
 @stop
 
 @section('js')
-<script type="text/javascript">
 <script src="https://cdn.tiny.cloud/1/cqu9z23sxsssxrvq8aabyju86nlrsh9j57v2u70r0r8gf40q/tinymce/6/tinymce.min.js"
         referrerpolicy="origin"></script>
+<script type="text/javascript">
     function previewImage(event, querySelector) {
 
         //Recuperamos el input que desencadeno la acción
@@ -59,7 +59,7 @@
 </script>
 <script type="text/javascript">
     tinymce.init({
-        selector: 'textarea.editor',
+        selector: 'textarea.editor2',
         width: 1000,
         height: 500,
         plugins: [
