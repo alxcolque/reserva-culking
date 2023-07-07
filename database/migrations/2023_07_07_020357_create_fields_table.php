@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('status')->status('activo');
             $table->decimal('hour_cost', 8, 2)->default(0.00);
             $table->longText('description')->nullable();
-            $table->foreign('category_id')->references('id')->on('categorys')->onDelete('CASCADE');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('CASCADE');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->timestamps();
         });
