@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('title')
+    Culking | Inicio
+@stop
+
+@section('menu')
+    @include('layouts.menu')
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -21,3 +28,8 @@
     </div>
 </div>
 @endsection
+@section('css')
+@stop
+
+@section('js')
+@stop
