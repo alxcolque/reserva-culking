@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->nullable();
             $table->string('logo')->nullable();
+            $table->string('color',50)->nullable();
             $table->string('location')->nullable();
             $table->string('status')->status('activo');
             $table->decimal('hour_cost', 8, 2)->default(0.00);
