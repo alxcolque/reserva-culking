@@ -10,7 +10,7 @@ class Plan extends Model
     use HasFactory;
     protected $fillable = [
         'title',
-        'slug',
+        'limit',
         'price',
         'discount',
         'discount_time',

@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -12,6 +14,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('events', function (Blueprint $table) {
+            $db = DB::connection('mysql2')->getDatabaseName();
             $table->id();
             $table->unsignedBigInteger('field_id');
             $table->unsignedBigInteger('user_id');
@@ -21,8 +24,8 @@ return new class extends Migration
             $table->dateTime('end')->nullable();
             $table->string('status')->status('pendiente');
             $table->decimal('payment', 8, 2)->default(0.00);
-            $table->foreign('field_id')->references('id')->on('fields')->onDelete('CASCADE');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
+            $table->foreign('field_id')->references('id')->on('fields')->onDelete('CASCADE')->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')->on(new Expression($db . '.users'))->onDelete('CASCADE')->onUpdate('cascade');
             $table->timestamps();
         });
     }

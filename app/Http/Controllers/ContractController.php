@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PlanContract;
+use App\Models\Contract;
 use Illuminate\Http\Request;
 
-class PlanContractController extends Controller
+class ContractController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class PlanContractController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PlanContract $planContract)
+    public function show(Contract $contract)
     {
         //
     }
@@ -42,7 +42,7 @@ class PlanContractController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PlanContract $planContract)
+    public function edit(Contract $contract)
     {
         //
     }
@@ -50,7 +50,7 @@ class PlanContractController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PlanContract $planContract)
+    public function update(Request $request, Contract $contract)
     {
         //
     }
@@ -58,7 +58,7 @@ class PlanContractController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PlanContract $planContract)
+    public function destroy(Contract $contract)
     {
         //
     }
