@@ -169,6 +169,9 @@
                     $dev1 = env('APP_ENV')
                 @endphp
                 @if ($dev1 == 'local')
+                    <a class="dropdown-item" href="{{ url('/categories') }}">
+                        <i class='bx bx-search-alt'></i> {{ __('Categoría') }}
+                    </a>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
@@ -179,6 +182,7 @@
                         @csrf
                     </form>
                 @else
+
                     <a class="dropdown-item" href="{{ url('https://cuenta.culking.com/logout') }}"
                         onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">

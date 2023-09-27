@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PlanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -52,7 +53,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * User Routes
          */
         Route::resource('plans', PlanController::class);
-
+        Route::resource('categories', CategoryController::class);
 
         Route::resource('roles', RoleController::class);
         Route::resource('permissions', PermissionController::class);

@@ -23,7 +23,7 @@ class CategorySeeder extends Seeder
          ];
 
         foreach ($categories as $category) {
-            Category::create(['title' => $category]);
+            Category::create(['title' => $category, 'color' => '#ff0000']);
         }
     }
 }
